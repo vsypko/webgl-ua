@@ -1,9 +1,14 @@
 h2 {
   font-family: 'Roboto', sans-serif;
+  font-size: 30px;
   z-index: 100;
   position: absolute;
-  top: 140px;
-  left: 70px;
+  margin: auto;
+  width: 370px;
+  height: 370px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: white;
 
 }
