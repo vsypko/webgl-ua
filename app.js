@@ -89,23 +89,23 @@ const webGLStart = () => {
   const mvpMatrix = mat4.create()
 
   mat4.translate(modelMatrix, modelMatrix, [0, 0, 0])
-  mat4.translate(viewMatrix, viewMatrix, [0, 0, 2])
+  mat4.translate(viewMatrix, viewMatrix, [0, 0, 1.7])
   mat4.invert(viewMatrix, viewMatrix)
 
   // mat4.scale(modelMatrix, modelMatrix, [0.9, 0.9, 0.9])
 
   const animation = () => {
     requestAnimationFrame(animation)
-    // mat4.rotateZ(modelMatrix, modelMatrix, Math.PI / 180)
-    mat4.rotateY(modelMatrix, modelMatrix, 0.005)
-    // mat4.rotateX(modelMatrix, modelMatrix, Math.PI / 180)
+    // mat4.rotateZ(modelMatrix, modelMatrix, 0.005)
+    mat4.rotateY(modelMatrix, modelMatrix, 0.004)
+    // mat4.rotateX(modelMatrix, modelMatrix, 0.007)
 
     mat4.multiply(mvMatrix, viewMatrix, modelMatrix)
     mat4.multiply(mvpMatrix, projectionMatrix, mvMatrix)
 
     gl.uniformMatrix4fv(uniformLocations.matrix, false, mvpMatrix)
 
-    gl.clearColor(0.1, 0.2, 0.3, 1)
+    gl.clearColor(0.07, 0.09, 0.13, 1)
     gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT)
     gl.drawArrays(gl.POINTS, 0, vertexData.length / 3)
   }
