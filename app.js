@@ -14,7 +14,7 @@ const spherePointCloud = (pointCount) => {
   return points
 }
 
-const vertexData = spherePointCloud(3e4)
+const vertexData = spherePointCloud(5e5)
 
 const createShader = (gl, type, str) => {
   const shader = gl.createShader(type)
@@ -107,7 +107,7 @@ const webGLStart = () => {
 
     gl.clearColor(0.07, 0.09, 0.13, 1)
     gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT)
-    gl.drawArrays(gl.POINTS, 0, vertexData.length / 3)
+    gl.drawArrays(gl.POINTERS, 0, vertexData.length / 3)
   }
 
   animation()
