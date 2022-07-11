@@ -1,4 +1,4 @@
-import "./node_modules/gl-matrix/gl-matrix-min.js"
+import "./gl-matrix-min.js"
 
 export const VSHADER_SOURCE = `
 precision mediump float;

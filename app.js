@@ -1,5 +1,5 @@
 import { VSHADER_SOURCE, FSHADER_SOURCE } from "./shaders.js"
-import "./node_modules/gl-matrix/gl-matrix-min.js"
+import "./gl-matrix-min.js"
 
 const spherePointCloud = (pointCount) => {
   let points = []
